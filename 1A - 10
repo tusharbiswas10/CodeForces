@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+#include <limits>
+#include <cmath>
+#include <inttypes.h>
+ using namespace std;
+ 
+ 
+ #define fr(i, l, r) for (int i = (int)(l); i <= (int)(r); ++i)
+ 
+ #define rfr(i, l, r) for (int i = (int)(l); i >= (int)(r); i--)
+ 
+ 
+ 
+ 
+ int main(){
+ 
+ 
+    int n,m,a;
+ 
+    cin>>n>>m>>a;
+ 
+ 
+   float cal1= ceil(float(n)/float(a));
+   float cal2= ceil(float(m)/float(a));
+ 
+   unsigned long long int x=  (cal1*cal2);
+   cout<< x;
+ 
+ 
+    return 0;
+ 
+ 
