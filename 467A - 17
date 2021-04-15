@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+#include <limits>
+#include <cmath>
+#include <inttypes.h>
+ using namespace std;
+
+
+ #define fr(i, l, r) for (int i = (int)(l); i < (int)(r); ++i)
+
+ #define rfr(i, l, r) for (int i = (int)(l); i >= (int)(r); i--)
+
+
+
+
+ int main(){
+
+
+    int n,m,a,c=0;
+
+    cin>>n;
+
+
+    fr(i,0,n)
+        {
+            cin>>m>>a;
+             if((a-m)>=2){
+                c++;
+             }
+        }
+
+        cout<<c;
+
+ }
