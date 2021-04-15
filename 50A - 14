@@ -1,0 +1,9 @@
+import  math
+m, n = input().split()
+a = int(m)
+b = int(n)
+
+c=a*b
+d=(c/2)
+
+print(math.floor(d))
