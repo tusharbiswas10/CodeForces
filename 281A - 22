@@ -1,0 +1,10 @@
+st=input()
+
+lt=list(st)
+a=lt[0]
+b=a.upper()
+ten = lt.pop(0)
+lt.insert(0, b)
+
+makeitastring = ''.join(map(str, lt))
+print (makeitastring)
