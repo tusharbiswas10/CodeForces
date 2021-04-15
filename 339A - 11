@@ -1,0 +1,29 @@
+st=input()
+lt=list(st)
+new_list = []
+
+l=len(st)
+temp=1
+j=0
+i=0
+for i in range(l):
+    if '+' in lt:
+        lt.remove('+')
+
+nlt=lt
+
+nlt = list(map(int, nlt))
+
+for i in range(len(nlt)):
+    for j in range(i + 1, len(nlt)):
+
+        if nlt[i] > nlt[j]:
+           nlt[i], nlt[j] = nlt[j], nlt[i]
+
+
+
+
+makeitastring = '+'.join(map(str, nlt))
+print (makeitastring)
+
+ 
