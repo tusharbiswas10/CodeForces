@@ -1,0 +1,60 @@
+#include <bits/stdc++.h>
+
+#define ll          long long int
+#define mod         1000000007
+#define endl        "\n"
+#define pb          push_back
+#define max2(a,b)   ((a<b)?b:a)
+#define max3(a,b,c) max2(max2(a,b),c)
+#define min2(a,b)   ((a>b)?b:a)
+#define min3(a,b,c) min2(min2(a,b),c)
+
+
+
+using namespace std;
+
+
+bool unique(long long int n)
+{
+    char visited[10] = {0};
+
+    while (n) {
+        int digit = n % 10;
+
+        n /= 10;
+        if (digit < 0) {
+            
+            digit = -digit;
+            n = -n;
+        }
+        if (visited[digit]++)
+            return false; 
+     }
+     return true; 
+ }
+
+
+
+
+
+int main(){
+	ios_base::sync_with_stdio(false); cin.tie(NULL);
+
+
+	vector<ll> v;
+    ll input;
+    cin>>input;
+    input=input+1;
+    while (unique(input)==false){
+        input=input+1;
+    }
+    cout<<input;
+  
+
+   
+    
+  
+
+    
+    return 0;
+}
