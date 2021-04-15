@@ -1,0 +1,11 @@
+n=int(input())
+count=0
+for j in range(n):
+    x, y, z = input().split()
+    a=int(x)
+    b=int(y)
+    c=int(z)
+    sum=a+b+c
+    if sum>1:
+        count += 1
+print(count)
