@@ -1,0 +1,13 @@
+n=int(input())
+c=0
+for c in range(n):
+    st = input()
+
+    count = len(st)
+    first_char = st[0]
+    last_char = st[-1]
+    if count>10:
+        print(first_char,count-2 ,last_char,sep="")
+    else:
+        print(st)
+    c=c+1
