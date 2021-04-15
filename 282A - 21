@@ -1,0 +1,15 @@
+n=int(input())
+x=0
+a='++X'
+b='X++'
+c='--X'
+d='X--'
+for i in range(n):
+    t=input()
+
+    if t==a or t==b:
+        x +=1
+
+    elif t==c or t==d:
+        x -=1
+print(x)
