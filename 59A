@@ -1,0 +1,82 @@
+#include <bits/stdc++.h>
+
+
+#define ll          long long int
+#define mod         1000000007
+#define endl        "\n"
+#define pb          push_back
+#define max2(a,b)   ((a<b)?b:a)
+#define max3(a,b,c) max2(max2(a,b),c)
+#define min2(a,b)   ((a>b)?b:a)
+#define min3(a,b,c) min2(min2(a,b),c)
+
+
+
+using namespace std;
+
+
+
+
+int main(){
+	ios_base::sync_with_stdio(false); cin.tie(NULL);
+
+	ll u=0, l=0;
+   vector<char> v;
+    char input;
+    while (cin >> input){
+        v.push_back(input);
+    }
+    
+    int n=size(v);
+
+    vector<char> v2;
+
+    for (int i = 0; i < n; ++i){
+        
+        if(int(v[i])>=65 & int(v[i])<=90 ){
+        	u++;
+        }
+
+        if(int(v[i])>=97 & int(v[i])<=122 ){
+        	l++;
+        }
+    }
+
+    if(u>l){
+    	//cout<<"upper"<<endl;
+    	for (int i = 0; i < n; ++i){
+        
+        if(int(v[i])>=65 & int(v[i])<=90 ){
+        	v2.push_back(v[i]);
+        	
+        }
+
+        if(int(v[i])>=97 & int(v[i])<=122 ){
+        	char a=char(int(v[i]-32));
+        	v2.push_back(a);
+        	
+        }
+    }
+    }
+
+    if(u<l || u==l){
+    	//cout<<"lower"<<endl;
+    	for (int i = 0; i < n; ++i){
+        
+        if(int(v[i])>=65 & int(v[i])<=90 ){
+        	char a=char(int(v[i]+32));
+        	v2.push_back(a);
+        }
+
+        if(int(v[i])>=97 & int(v[i])<=122 ){
+        	v2.push_back(v[i]);
+        }
+    }
+    }
+    
+    for (int i = 0; i < n; ++i){
+        
+        cout<<v2[i];
+    }
+    return 0;
+}
