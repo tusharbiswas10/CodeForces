@@ -1,0 +1,62 @@
+#include <bits/stdc++.h>
+
+
+#define ll          long long int
+#define mod         1000000007
+#define endl        "\n"
+#define pb          push_back
+#define max2(a,b)   ((a<b)?b:a)
+#define max3(a,b,c) max2(max2(a,b),c)
+#define min2(a,b)   ((a>b)?b:a)
+#define min3(a,b,c) min2(min2(a,b),c)
+
+
+
+using namespace std;
+
+
+
+
+int main(){
+	ios_base::sync_with_stdio(false); cin.tie(NULL);
+
+	ll u=0, l=0;
+   vector<char> v;
+    char input;
+    while (cin >> input){
+        v.push_back(input);
+    }
+    
+    int n=size(v);
+
+    vector<char> v2;
+
+    if(int(v[0])>=65 & int(v[0])<=90 ){
+        	for (int i = 0; i < n; ++i){
+        
+        			cout<<v[i];
+    			}
+        }
+
+
+
+    else{
+
+    	char a=char(int(v[0]-32));
+        	v2.push_back(a);
+
+    for (int i = 1; i < n; ++i){
+
+        v2.push_back(v[i]);
+    }
+
+    
+    
+    for (int i = 0; i < n; ++i){
+        
+        cout<<v2[i];
+    }
+
+	}
+    return 0;
+}
