@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+
+#define ll          long long int
+#define mod         1000000007
+#define endl        "\n"
+#define pb          push_back
+#define max2(a,b)   ((a<b)?b:a)
+#define max3(a,b,c) max2(max2(a,b),c)
+#define min2(a,b)   ((a>b)?b:a)
+#define min3(a,b,c) min2(min2(a,b),c)
+
+
+
+using namespace std;
+
+
+
+
+
+
+
+
+int main(){
+	ios_base::sync_with_stdio(false); cin.tie(NULL);
+
+  vector<char> n1;
+  
+
+  char input;
+    while (cin >> input){
+        n1.push_back(input);
+    }
+    
+    int n=n1.size();
+
+    set<char> uni;
+  
+    for (int i = 0; i <n1.size(); ++i){
+    	uni.insert(n1[i]);
+    }
+
+     if((uni.size())%2==0){
+        cout<<"CHAT WITH HER!"<<"\n";
+    	}
+    	else{
+        cout<<"IGNORE HIM!"<<"\n";
+    	}
+
+
+
+
+    
+    return 0;
+}
