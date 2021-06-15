@@ -1,0 +1,58 @@
+#include <bits/stdc++.h>
+#include <iostream>
+#define ll long long int
+#define mod 1000000007
+#define endl        "\n"
+#define pb          push_back
+#define max2(a,b)   ((a<b)?b:a)
+#define max3(a,b,c) max2(max2(a,b),c)
+#define min2(a,b)   ((a>b)?b:a)
+#define min3(a,b,c) min2(min2(a,b),c)
+
+
+using namespace std;
+
+
+
+ int sol(int x,int a, int b, int c){
+
+ 	vector<int> memo(x+1);
+ 	memo[0]=0;
+ 	for (int i = 1; i <= x; ++i)
+ 	{	int d1=INT_MIN,d2=INT_MIN,d3=INT_MIN;
+ 		if(i>=a){
+ 			d1=memo[i-a];
+ 		}
+ 		if(i>=b){
+ 			d2=memo[i-b];
+ 		}
+ 		if(i>=c){
+ 			d3=memo[i-c];
+ 		}
+
+ 		memo[i]=max3(d1,d2,d3)+1;
+ 	}
+
+ 	int ans= memo[x];
+    	cout<<ans; 
+
+ }
+
+
+
+
+int main(){
+
+
+   ios_base::sync_with_stdio(false); cin.tie(NULL);
+
+    int x,a,b,c;
+    cin>>x>>a>>b>>c;
+
+ 	sol(x,a,b,c);
+
+
+
+
+    return 0;
+}
