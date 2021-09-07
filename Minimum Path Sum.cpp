@@ -32,5 +32,22 @@ public:
     }
         // return last cell of grid for result as it stores the min possible path sum
         return grid[r-1][c-1];
+	    
+	    
+	    // recursive solution
+	    /* int getMinPath(vector <vector <int>> &grid, int i, int j) {
+        if (i == 0 && j == 0) {
+            return grid[i][j];
+        }
+        int m = INT_MAX;
+        if (j > 0) {
+            m = grid[i][j] + getMinPath(grid, i, j - 1);
+        }
+        if (i > 0) {
+            int s = grid[i][j] + getMinPath(grid, i - 1, j);
+            m = min(m, s);
+        }
+        return m;
+    } */ 
     }
 };
