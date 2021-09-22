@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minCostClimbingStairs(vector<int>& cost) {
-        // dp sol, O(n) time, no extra space 
+        // dp sol, O(n) time, O(1) space 
         for(int i=2;i<cost.size();i++){
             cost[i]+=min(cost[i-1],cost[i-2]);
         }
